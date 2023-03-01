@@ -9,6 +9,12 @@ plugins {
 
 val minecraftVersion = project.property("minecraft_version") as String
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
 repositories {
     mavenCentral()
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
@@ -70,12 +76,6 @@ dependencies {
     // UI
     implementation("de.cubbossa:Translations:1.1")
     implementation("de.cubbossa:MenuFramework:1.2")
-}
-
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
-    }
 }
 
 tasks {

@@ -3,6 +3,12 @@ plugins {
     id("io.freefair.lombok") version "6.6.2"
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
 repositories {
 
 }
